@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "/opt/zephyrproject/zephyr/build",
+    "command": "arm-zephyr-eabi-gcc ...",
+    "file": "src/main.c"
+  }
+]

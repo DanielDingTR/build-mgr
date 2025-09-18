@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zephyr Build Output Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Zephyr Build Output Manager</h1>
+    <p class="subtitle">Inspect west build results, download artifacts, and keep the workspace tidy.</p>
+  </header>
+  <main>
+    <section class="panel" id="builds-panel">
+      <div class="panel-header">
+        <h2>Build History</h2>
+        <button id="refresh-builds" type="button">Refresh</button>
+      </div>
+      <ul id="build-list" class="build-list"></ul>
+      <div id="empty-state" class="empty" hidden>No build outputs found in the configured directory.</div>
+    </section>
+
+    <section class="panel" id="details-panel">
+      <div class="panel-header">
+        <h2 id="detail-title">Build Details</h2>
+      </div>
+      <div id="build-details" class="details" hidden>
+        <div class="section">
+          <h3>Summary</h3>
+          <dl id="summary-list" class="summary"></dl>
+        </div>
+        <div class="section">
+          <div class="section-header">
+            <h3>Artifacts</h3>
+            <span id="artifact-count" class="badge"></span>
+          </div>
+          <table id="artifact-table" class="artifacts">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Size</th>
+                <th>Modified</th>
+                <th class="actions">Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div id="artifact-empty" class="empty" hidden>No artifacts produced.</div>
+        </div>
+        <div class="section">
+          <div class="section-header">
+            <h3>Build Log</h3>
+            <div class="log-controls">
+              <label for="tail-lines">Tail</label>
+              <select id="tail-lines">
+                <option value="">Full</option>
+                <option value="100">100</option>
+                <option value="250">250</option>
+                <option value="500">500</option>
+              </select>
+              <button id="refresh-log" type="button">Refresh Log</button>
+            </div>
+          </div>
+          <textarea id="build-log" readonly></textarea>
+        </div>
+      </div>
+      <div id="placeholder" class="placeholder">Select a build from the left to view details.</div>
+    </section>
+  </main>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

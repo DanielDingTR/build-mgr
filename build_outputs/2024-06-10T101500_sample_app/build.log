@@ -1,0 +1,15 @@
+-- west build: generating a build system
+Including boilerplate (Zephyr base): /opt/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: samples/basic/blinky
+-- Board: nrf52840dk_nrf52840
+-- Zephyr version: 3.5.99
+-- Found toolchain: zephyr-sdk (0.16.2)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /opt/zephyrproject/zephyr/build
+[1/152] Preparing syscall dependency handling
+[152/152] Linking C executable zephyr/zephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       23160 B     1048576 B      2.21%
+            SRAM:       13528 B      262144 B      5.16%
+[152/152] Build finished successfully (elapsed time 0:02:08)

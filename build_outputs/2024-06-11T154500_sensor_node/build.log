@@ -1,0 +1,15 @@
+-- west build: generating a build system
+Including boilerplate (Zephyr base): /opt/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: applications/sensor_node
+-- Board: stm32l4r5ai_nucleo
+-- Zephyr version: 3.5.99
+-- Found toolchain: gnuarmemb
+-- Configuring done
+-- Generating done
+[120/168] Building C object CMakeFiles/app.dir/src/main.c.obj
+../src/main.c:45:12: warning: unused variable 'temperature'
+[168/168] Linking C executable zephyr/zephyr.elf
+/opt/gnuarmemb/bin/arm-none-eabi-ld: section `.data' will not fit in region `SRAM'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+ERROR: command exited with status 1: /usr/bin/cmake --build /opt/zephyrproject/zephyr/build
