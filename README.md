@@ -82,6 +82,15 @@ A lightweight build monitoring dashboard that scans build outputs, exposes them 
 - Extend `server/app.py` to ingest additional metadata (e.g., footprint reports, warnings.xml) as needed.
 - Hook into CI by copying west build directories into an archival location and scheduling a cron job or CI step to keep the folder up to date.
 
+## Deployment
+
+Ready to move beyond local development? The [deployment guide](DEPLOYMENT.md) covers:
+
+- Preparing a production-ready Python environment (systemd, gunicorn/uvicorn)
+- Serving the static frontend via a reverse proxy
+- Containerizing the application and wiring external artifact storage
+- Operational guidance such as health checks, upgrades, and troubleshooting tips
+
 ## Next steps
 
 - Persist metadata in a lightweight database (SQLite) for faster querying
